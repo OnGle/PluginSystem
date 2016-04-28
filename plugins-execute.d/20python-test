@@ -1,0 +1,3 @@
+#!/usr/bin/python
+
+print "G'day, I'm a python plugin, however I can only accept input from commandline as I am executed inside a subshell. I could however perhaps be run with execfile and globals/locals defined. However my programmer would have to be careful."

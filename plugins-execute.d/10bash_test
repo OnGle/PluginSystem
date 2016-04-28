@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "G'day, I'm a bash plugin for a python program :D"
