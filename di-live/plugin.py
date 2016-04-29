@@ -28,7 +28,7 @@ class Plugins(object):
         self.plugins = []
 
         if not isdir(path):
-            raise PluginError('Plugin directory "%s" does not exist!' % dirname(path))
+            raise PluginError('Plugin directory "{}" does not exist!'.format(dirname(path)))
 
         for file_name in os.listdir(path):
             file_path = join(path, file_name)
@@ -41,8 +41,8 @@ class Plugins(object):
             yield plugin
 
 if __name__ == '__main__':
-    print 'Plugins-execute uses os.system to run executable scripts as `plugins` so restrictions on program structure are minimal however effeciently sharing data could be hard, complex models would most likely want to be defined in some common file such as common.py like in di-live.\n'
+    print 'This plugin implementation uses os.system to run executable scripts as `plugins` so restrictions on program structure are minimal however effeciently sharing data could be hard, complex models would most likely want to be defined in some common file such as common.py like in di-live.\n'
 
-    plugins = Plugins('plugins-execute.d')
+    plugins = Plugins('plugins.d')
     for plugin in plugins:
         plugin.execute()
