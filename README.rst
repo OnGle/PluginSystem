@@ -100,3 +100,13 @@ Methods
     Cons:
         - Maintaining menu order could introduce extra complexity
 
+
+-   Imported python modules, this method is essentially the same as the
+    execfile method however it imports the modules rather than executing
+    each file. There are multiple ways to programmatically import python
+    modules. The __import__ is behind import, but the officially supported
+    way of doing this would be using imp.find_module and imp.load_module,
+    however the beneifets of using imp aren't really relevant unless we need
+    to reload modules or load modules from locations not in the path.
+
+    
